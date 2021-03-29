@@ -18,12 +18,11 @@ class PostViewModel: NSObject {
     
     override init() {
         super.init()
-        self.api = APIService()
+        self.api = APIService.sharedInstance
         self.getPosts()
     }
     
     func getPosts() {
-        //call api
         api.getPostsApi { (posts) in
             self.posts = posts
         }

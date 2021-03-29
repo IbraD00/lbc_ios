@@ -8,25 +8,27 @@
 import UIKit
 
 class MainController: UITabBarController {
+
     override func viewDidLoad() {
-        
         tabBar.backgroundColor = .white
         tabBar.barTintColor = .white
         tabBar.tintColor = .orange
-        viewControllers = [createTabItem(title: "Annonces")]
+        viewControllers = [createTabItem(title: "Annonces", icon: "search", viewController: PostViewController())]
     }
     
-    func createTabItem(title : String) -> UIViewController {
-        let viewC = PostViewController()
-        
-        //viewC.navigationBar.isHidden = true
+    func createTabItem(title: String, icon: String, viewController: UIViewController) -> UIViewController {
+        let navViewController = UINavigationController(rootViewController: viewController)
+        navViewController.navigationBar.prefersLargeTitles = true
+        navViewController.navigationBar.tintColor = .white
+        navViewController.navigationBar.barTintColor = .orange
+
         let tabBarItem = UITabBarItem()
-        tabBarItem.title = "Annonces"
-        tabBarItem.image = UIImage(named: "magnifyingglass")
+        tabBarItem.title = title
+        tabBarItem.image = UIImage(named: icon)
         
-        viewC.tabBarItem = tabBarItem
+        navViewController.tabBarItem = tabBarItem
         
-        return viewC
+        return navViewController
     }
 }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostTableViewDataSource <Cell: UITableViewCell, T>: NSObject, UITableViewDataSource {
+class PostTableViewDataSource <Cell: UITableViewCell, T>: NSObject, UITableViewDataSource, UITableViewDelegate {
     var posts: Array<T>
     var updateCell : (Cell, T) -> () = {_,_ in }
     
@@ -26,5 +26,9 @@ class PostTableViewDataSource <Cell: UITableViewCell, T>: NSObject, UITableViewD
         self.updateCell(cell, posts[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 400
     }
 }

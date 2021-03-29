@@ -17,3 +17,11 @@ struct Post: Decodable {
     let creation_date: String
     let is_urgent: Bool
 }
+
+struct PostMedia {
+    let id: Int
+    let smallImage: UIImage
+    let thumbImage: UIImage
+}
+
+

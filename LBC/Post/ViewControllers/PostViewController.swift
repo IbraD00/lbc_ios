@@ -28,6 +28,7 @@ class PostViewController: UIViewController {
     
     func updateUI() -> Void {
         view.backgroundColor = .orange
+        navigationItem.title = "Annonces"
 
         tableView.backgroundColor = .orange
         tableView.separatorStyle = .none
@@ -48,6 +49,7 @@ class PostViewController: UIViewController {
         
         DispatchQueue.main.async {
             self.tableView.dataSource = self.dataSource
+            self.tableView.delegate = self.dataSource
             self.tableView.reloadData()
         }
     }
