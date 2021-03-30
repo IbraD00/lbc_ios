@@ -29,11 +29,17 @@ class PostViewController: UIViewController {
     func updateUI() -> Void {
         view.backgroundColor = .orange
         navigationItem.title = "Annonces"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 
         tableView.backgroundColor = .orange
         tableView.separatorStyle = .none
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "postCell")
+        tableView.alpha = 0
         view.addSubview(tableView)
+        UIView.animate(withDuration: 1, delay: 0.2, options: .transitionCurlUp, animations: {
+            self.tableView.alpha = 1
+        })
+        
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true

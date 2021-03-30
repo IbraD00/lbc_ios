@@ -19,7 +19,10 @@ class MainController: UITabBarController {
     func createTabItem(title: String, icon: String, viewController: UIViewController) -> UIViewController {
         let navViewController = UINavigationController(rootViewController: viewController)
         navViewController.navigationBar.prefersLargeTitles = true
-        navViewController.navigationBar.tintColor = .white
+        
+        navViewController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navViewController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navViewController.navigationBar.tintColor = UIColor.white
         navViewController.navigationBar.barTintColor = .orange
 
         let tabBarItem = UITabBarItem()
