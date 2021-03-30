@@ -45,4 +45,4 @@ struct Helper {
         return dateFormatterGet.string(from: Date())
     }
 }
-    
+

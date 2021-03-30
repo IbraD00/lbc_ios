@@ -17,4 +17,3 @@ struct Post: Decodable {
     let creation_date: String
     let is_urgent: Bool
 }
-

@@ -10,7 +10,6 @@ import UIKit
 class APIService :  NSObject {
     
     public static let sharedInstance = APIService()
-    
     private let sourcesURL = URL(string: "https://raw.githubusercontent.com/leboncoin/paperclip/master/listing.json")!
     
     func getPostsApi(completion : @escaping (Array<Post>) -> ()) {
