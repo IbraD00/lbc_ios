@@ -23,4 +23,26 @@ extension UIImageView {
         }
     }
 }
+
+extension UIColor {
+    static var grayColor = UIColor.init(red: 241/255, green: 241/255, blue: 241/255, alpha: 255/255)
+}
+
+struct Helper {
+    public static let sharedInstance = Helper()
+    
+    func getDate(dateString: String) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd MMM yyyy"
+
+        if let date = dateFormatterGet.date(from: dateString) {
+            return dateFormatterPrint.string(from: date)
+        }
+        
+        return dateFormatterGet.string(from: Date())
+    }
+}
     

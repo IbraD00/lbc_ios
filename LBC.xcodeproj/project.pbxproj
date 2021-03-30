@@ -14,6 +14,7 @@
 		6CABE9BA2610DAA700245B08 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CABE9B92610DAA700245B08 /* PostTableViewCell.swift */; };
 		6CABE9C22610DDE700245B08 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CABE9C12610DDE700245B08 /* APIService.swift */; };
 		6CABE9CB2612944D00245B08 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CABE9CA2612944D00245B08 /* Helper.swift */; };
+		6CABE9D32612AA0B00245B08 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CABE9D22612AA0B00245B08 /* DetailViewController.swift */; };
 		6CDF86592608B32B00917283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF86582608B32B00917283 /* AppDelegate.swift */; };
 		6CDF865D2608B32B00917283 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF865C2608B32B00917283 /* MainController.swift */; };
 		6CDF86602608B32B00917283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF865E2608B32B00917283 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		6CABE9B92610DAA700245B08 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		6CABE9C12610DDE700245B08 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		6CABE9CA2612944D00245B08 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		6CABE9D22612AA0B00245B08 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6CDF86552608B32B00917283 /* LBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDF86582608B32B00917283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CDF865C2608B32B00917283 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				6CABE9A62610CCC600245B08 /* PostViewController.swift */,
+				6CABE9D22612AA0B00245B08 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				6CDF865D2608B32B00917283 /* MainController.swift in Sources */,
 				6CABE9CB2612944D00245B08 /* Helper.swift in Sources */,
 				6CABE9B42610CE1D00245B08 /* PostTableViewDataSource.swift in Sources */,
+				6CABE9D32612AA0B00245B08 /* DetailViewController.swift in Sources */,
 				6CABE9C22610DDE700245B08 /* APIService.swift in Sources */,
 				6CDF86592608B32B00917283 /* AppDelegate.swift in Sources */,
 			);

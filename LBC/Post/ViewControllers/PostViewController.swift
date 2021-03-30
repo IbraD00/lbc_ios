@@ -45,12 +45,27 @@ class PostViewController: UIViewController {
     func updateDataSource()  {
         self.dataSource = PostTableViewDataSource.init(_posts: self.viewModel.posts, updateCell: { (cell, item) in
             cell.post = item
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.openDetailPostView(_:)))
+            cell.tag = item.id
+            cell.addGestureRecognizer(tap)
         })
         
         DispatchQueue.main.async {
             self.tableView.dataSource = self.dataSource
             self.tableView.delegate = self.dataSource
             self.tableView.reloadData()
+        }
+    }
+    
+    @objc func openDetailPostView(_ sender: UITapGestureRecognizer? = nil) {
+        let id = sender?.view?.tag ?? -1
+        let detailView = DetailViewController()
+        let post = viewModel.posts.first { (item) -> Bool in
+            item.id == id
+        }
+        if post != nil {
+            detailView.post = post
+            navigationController?.present(detailView, animated: true, completion: nil)
         }
     }
 }
